@@ -21,13 +21,20 @@ function getApi(){
         .then(function (data){
             console.log(data)
 
-            var tempNow = document.createElement('h2')
-            tempNow.textContent = 'Current Temp ' + data.main.temp
+            var displayWeatherText = 
+            `
+            <h2> Current Temp: ${data.main.temp} </h2>
+            <h2> Feels Like: ${data.main.feels_like}</h2>
+            <h2> Humidity: ${data.main.humidity}</h2>
+            <h2> High Temp: ${data.main.temp_max}</h2>
+            <h2> Low Temp: ${data.main.temp_min}</h2>`
 
-            currentWeather.append(tempNow)
+            currentWeather.setAttribute('style', 'border: 5px solid black')
+            currentWeather.innerHTML = displayWeatherText
 
 
         })
+        
 }
 
 searchBtn.addEventListener('click', getApi)

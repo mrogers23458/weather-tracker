@@ -8,13 +8,31 @@ header{
     display: flex;
     flex-direction: column;
     width: 300px;
+    margin: 10px;
 }
 
 .current-weather-container{
     display: flex;
+    
 }
 
 .current-weather-display{
     display: flex;
-    margin-left: 10px;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+}
+
+input{
+    margin: 10px;
+}
+
+button{
+    margin: 10px;
+}
+
+label{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
