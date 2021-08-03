@@ -23,6 +23,15 @@ header{
     width: 100%;
 }
 
+.history-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 10px;
+}
+
 input{
     margin: 10px;
 }
@@ -35,4 +44,20 @@ label{
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+h2{
+    padding-left: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+#srchText{
+    width: 100%;
+    background: cornflowerblue;
+    margin: 1px;
+    border: 2px solid darkcyan;
+    border-radius: 10%;
 }
