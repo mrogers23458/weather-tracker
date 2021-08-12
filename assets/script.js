@@ -9,16 +9,16 @@ console.log(forecastEl)
 console.log(searchBtn)
 var currentWeather = document.querySelector('.current-weather-display')
 console.log(currentWeather)
-var weatherIconUrl = 'http://openweathermap.org/img/w/10d.png'
+var weatherIconUrl = 'https://openweathermap.org/img/w/10d.png'
 
 
 
 
 function getApi(search){
     
-    var requestUrl = `http://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${key}&units=imperial`
+    var requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${key}&units=imperial`
     console.log(requestUrl)
-    var forcastRequest = `http://api.openweathermap.org/data/2.5/forecast?q=${search}&appid=${key}&units=imperial`
+    var forcastRequest = `https://api.openweathermap.org/data/2.5/forecast?q=${search}&appid=${key}&units=imperial`
 
     fetch(requestUrl)
         .then(function(response){
@@ -38,7 +38,7 @@ function getApi(search){
                     var displayWeatherText = 
                     `
                     <h1> ${data.name + ' - ' + date.toDateString()} </h1>
-                    <img class='main-weather-icon' src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" alt='weather icon'>
+                    <img class='main-weather-icon' src="https://openweathermap.org/img/w/${data.weather[0].icon}.png" alt='weather icon'>
                     <p> Current Temp: ${data.main.temp} °F </p>
                     <p> Feels Like: ${data.main.feels_like} °F </p>
                     <p> Humidity: ${data.main.humidity} % </p>
@@ -63,7 +63,7 @@ function getApi(search){
                         newForecast.setAttribute('class', 'forecast-card')
                         newForecast.innerHTML = 
                         `<h2> ${newDailyDate}</h2>
-                        <img class='main-weather-icon' src="http://openweathermap.org/img/w/${oneCallData.daily[i].weather[0].icon}.png" alt='weather icon'> 
+                        <img class='main-weather-icon' src="https://openweathermap.org/img/w/${oneCallData.daily[i].weather[0].icon}.png" alt='weather icon'> 
                         <p> Temp: ${oneCallData.daily[i].temp.day} °F </p>
                         <p> Feels like: ${oneCallData.daily[i].temp.day} °F</p>
                         `
